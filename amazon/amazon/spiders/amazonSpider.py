@@ -9,7 +9,7 @@ class AmazonspiderSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        for amazon in response.xpath('//li[@class="zg-item-immersion"]'):
+        for amazon in response.xpath('//div[@class="zg_itemRow"]'):
            yield {
                 'name': amazon.xpath('.//img/@alt').extract(),
                 'author': amazon.xpath('.//span[@class="a-size-small a-color-base"]/text()').extract_first(),
