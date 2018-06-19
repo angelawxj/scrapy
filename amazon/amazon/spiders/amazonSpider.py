@@ -11,9 +11,9 @@ class AmazonspiderSpider(scrapy.Spider):
     def parse(self, response):
         for amazon in response.xpath('//div[@class="zg_itemRow"]'):
            yield {
-                'name': amazon.xpath('.//img/@alt').extract(),
+                'name': amazon.xpath('.//img/@alt').extract_first(),
                 'author': amazon.xpath('.//span[@class="a-size-small a-color-base"]/text()').extract_first(),
-                'img_url': amazon.xpath('.//img/@src').extract(),
+                'img_url': amazon.xpath('.//img/@src').extract_first(),
             }
             
 
