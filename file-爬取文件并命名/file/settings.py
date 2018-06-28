@@ -64,7 +64,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
+ITEM_PIPELINES = {
+#    'scrapy.pipelines.files.FilesPipeline': 1,
+    'file.pipelines.FilePipeline': 1,
+}
 
 FILES_STORE = 'E:\\a'
 
