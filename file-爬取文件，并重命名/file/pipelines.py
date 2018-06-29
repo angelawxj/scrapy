@@ -21,5 +21,5 @@ class FilePipeline(FilesPipeline):
         item['file_paths'] = file_paths
         return item
     def file_path(self, request, response=None, info=None):
-        return 'full/%s.mobil' % request.meta.get('filename')
+        return 'full/%s.mobi' % request.meta.get('filename')
         
