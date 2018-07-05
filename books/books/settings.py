@@ -70,7 +70,7 @@ ITEM_PIPELINES = {
 }
 FILES_STORE = 'E:\\book'
 
-MEDIA_ALLOW_REDIRECTS = True
+MEDIA_ALLOW_REDIRECTS = True  
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

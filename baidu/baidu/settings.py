@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for pagination project
+# Scrapy settings for baidu project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'pagination'
+BOT_NAME = 'baidu'
 
-SPIDER_MODULES = ['pagination.spiders']
-NEWSPIDER_MODULE = 'pagination.spiders'
+SPIDER_MODULES = ['baidu.spiders']
+NEWSPIDER_MODULE = 'baidu.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'pagination (+http://www.yourdomain.com)'
+#USER_AGENT = 'baidu (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -34,7 +34,7 @@ ROBOTSTXT_OBEY = True
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
-COOKIES_ENABLES = True
+
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
 
@@ -47,13 +47,13 @@ COOKIES_ENABLES = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'pagination.middlewares.PaginationSpiderMiddleware': 543,
+#    'baidu.middlewares.BaiduSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'pagination.middlewares.PaginationDownloaderMiddleware': 543,
+#    'baidu.middlewares.BaiduDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,9 +64,11 @@ COOKIES_ENABLES = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'pagination.pipelines.PaginationPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'baidu.pipelines.BaiduPipeline': 300,
+}
+
+FEED_EXPORT_ENCODING = 'utf-8' 
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +90,8 @@ COOKIES_ENABLES = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+MYSQL_HOST = 'localhost'
+MYSQL_PASSWD = 'dong1990'         #数据库密码，请修改
+MYSQL_DBNAME = 'baidu'         #数据库名字，请修改
+MYSQL_USER = 'root'             #数据库账号，请修改
+
