@@ -38,19 +38,24 @@ class BaiduPipeline(object):
             item['summary'],
             item['tool1'],
             item['tool2'],
+            item['steptitle1'],
             item['step1'],
             item['stepimg1'],
+            item['steptitle2'],
             item['step2'],
             item['stepimg2'],
+            item['steptitle3'],
             item['step3'],
             item['stepimg3'],
+            item['steptitle4'],
             item['step4'],
             item['stepimg4'],
+            item['steptitle5'],
             item['step5'],
             item['stepimg5'],
             item['note1'],
             item['note2'],
         )
 
-        sql = 'INSERT INTO books(type,title,summary,tool1,tool2,step1,stepimg1,step2,stepimg2,step3,stepimg3,step4,stepimg4,step5,stepimg5,note1,note2) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+        sql = 'INSERT INTO books(type,title,summary,tool1,tool2,steptitle1,step1,stepimg1,steptitle2,step2,stepimg2,steptitle3,step3,stepimg3,steptitle4,step4,stepimg4,steptitle5,step5,stepimg5,note1,note2) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
         self.db_cur.execute(sql, values)

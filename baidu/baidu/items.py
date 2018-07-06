@@ -21,18 +21,23 @@ class BaiduItem(scrapy.Item):
      tool2 = scrapy.Field()
      #步骤1
      step1 = scrapy.Field()
+     steptitle1 = scrapy.Field()
      stepimg1 = scrapy.Field()
      #步骤2
      step2 = scrapy.Field()
+     steptitle2 = scrapy.Field()
      stepimg2 = scrapy.Field()
      #步骤3
      step3= scrapy.Field()
+     steptitle3 = scrapy.Field()
      stepimg3 = scrapy.Field()
      #步骤4
      step4= scrapy.Field()
+     steptitle4 = scrapy.Field()
      stepimg4 = scrapy.Field()
      #步骤5
      step5= scrapy.Field()
+     steptitle5 = scrapy.Field()
      stepimg5 = scrapy.Field()
      #注意事项1
      note1= scrapy.Field()
