@@ -76,4 +76,3 @@ class JySpider(scrapy.Spider):
             'note1': '谢谢观看本篇经验',
             'note2': '你的点赞是我写经验的动力',
         }
-		
